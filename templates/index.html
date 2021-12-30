@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8"></meta>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   
+    <style>
+       
+*,
+*:before,
+*:after{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background: black;
+}
+.container{
+    width: 40%;
+    top:50%;
+    left:50%;
+    background: white;
+    border-radius:10px;
+    min-width: 450px;
+    position: absolute;
+    min-height:100px;
+    transform: translate(-50%,-50%);
+}
+#newtask{
+    position: relative;
+    padding:30px 20px;
+}
+#newtask input{
+    width: 75%;
+    height: 45px;
+    padding:12px;
+    color: #111111;
+    font-weight:500;
+    position: relative;
+    border-radius: 5px;
+    font-family: 'Poppins',sans-serif;
+    font-size: 15px;
+    border:2px solid #d1d3d4;
+}
+
+#newtask input:focus{
+    outline:none;
+    border-color: #0d75ec;
+}
+#newtask button{
+    position: relative;
+    float: right;
+    font-weight: 500;
+    font-size:16px;
+    background-color: #0d75ec;
+    border : none;
+    color:#ffffff;
+    cursor: pointer;
+    outline: none;
+    width:20%;
+    height: 45px;
+    border-radius: 5px;
+    font-family: 'Poppins',sans-serif;
+
+}
+#task{
+    border-radius: 10px;
+    width: 100%;
+    position: relative;
+    background-color: #ffffff;
+    padding:30px 20px;
+    margin-top:10px; 
+}
+.task{
+    border-radius: 5px;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #939697;
+    cursor: pointer;
+    background-color: #c5e1e6;
+    height: 50px;
+    margin-bottom: 8px;
+    padding: 5px 10px;
+    display: flex;
+}
+.task span{
+    font-family: 'Poppins',sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+
+}
+.task button{
+    background-color: #0a3ea4;
+    color:#ffffff;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    height: 100%;
+    width: 40px;
+    border-radius: 5px;
+}
+.display{
+    text-align: center;
+    width: 450px;
+    color: #16a864;
+
+}
+.wrapper{
+    margin: 0 9rem;
+    background-color: white;
+    height: 45vh;
+    margin: 50px auto;
+    left:50px;
+    position: relative;
+    border-radius: 2px;
+
+}
+.wrapper h2{
+    padding: 5px 0;
+    text-align: center;
+    background: #0548b5;
+    color: white;
+    font-family: sans-serif;
+}
+.wrapper p{
+    margin : 20px 50px;
+    margin-right: 20px;
+    text-align: left;
+    color: #04214c;
+    font-size: 23px;
+}
+.wrapper h2 span{
+    font-size: 26px;
+    color: #9beefb;
+
+}
+.wrapper p span{
+    color: #90006e;
+    font-size: 24px;
+}
+        
+    </style>
+</head>
+ 
+<body>
+    <section id="inputs">
+    <div class="container">
+        <div id="newtask">
+            <input type="text" id="whois" placeholder="Search Hacker">
+            
+            
+            <button value="Submit" type="submit" id="search">search</button>
+        
+        </div>
+        <section class="display">
+            <div class="wrapper">
+                <h4 style="color:black;">Fetched results Appear here</h4>
+                <h2 id="name"></h2>
+                <p id="language"></p>
+                <p id="id"></p>
+                <p id="product"></p>
+            </div>
+        </section>
+    </section>
+        <script type="text/javascript" src="{{url_for('static', filename='js/scriptss.js')}}"></script>
+</body>
+</html>
+
